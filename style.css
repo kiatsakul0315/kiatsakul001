@@ -80,4 +80,49 @@ body {
   nav button:hover {
     background: #005f99;
   }
-    
+  .profile-img {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 5%;
+    }
+  
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .hero {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+  
+    .hero img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+  
+    .section {
+      padding: 2rem 5%;
+    }
+  
+    .project {
+      margin-top: 1rem;
+    }
+  
+    nav a.btn,
+    nav button.btn {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
