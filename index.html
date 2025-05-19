@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>เว็บแนะนำตัว - เกียรติสกุล ไพยเสน</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kiatsakul | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>สวัสดีครับ ผมชื่อ เกียรติสกุล ไพยเสน </h1>
-  <p>นี่คือเว็บไซต์แนะนำตัวเองแบบง่าย ๆ ด้วย GitHub Pages</p>
-  <p>สามารถติดต่อผมได้ที่ <a href="mailto:kiatsakul2905@gmail.com">kiatsakul2905@gmail.com</a></p>
+
+  <header>
+    <div class="container">
+      <h1 data-th="เรซูเม่ เกียรติสกุล ไพยเสน" data-en="Resume Kiatsakul paiyasen">เรซูเม่ เกียรติสกุล ไพยเสน</h1>
+      <nav>
+        <a href="#about"class="btn" data-th="เกี่ยวกับ" data-en="About">About</a>
+        <a href="#skills"class="btn" data-th="ความสามารถ" data-en="Skills">Skills</a>
+        <a href="#projects"class="btn" data-th="โปรเจ็คร์" data-en="Projects">Projects</a>
+        <a href="#contact" class="btn" data-th="ติดต่อ" data-en="Contact">Contact</a>
+        <button onclick="switchLang('th')" class="btn" data-th="ไทย" data-en="TH">TH</button>
+        <button onclick="switchLang('en')" class="btn" data-th="อังกฤษ" data-en="EN">EN</button>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+    <img src="profile.jpg" alt="Kiatsakul Profile" style="width: 200px; border-radius: 1rem; object-fit: cover;"/>
+      <h2 data-th="สวัสดีครับ, ผมชื่อเกียรติสกุล" data-en="Hello, I'm Kiatsakul"> สวัสดีครับ, ผมชื่อเกียรติสกุล</h2>
+      <p data-th="นักศึกษาสาย Dev ที่หลงใหลใน Web และ AI" data-en="A Dev student passionate about Web and AI">นักศึกษาสาย Dev ที่หลงใหลใน Web และ AI</p>
+      <a href="#projects" class="btn" data-th="ดูผลงาน" data-en="See My Work">ดูผลงาน</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 data-th="เกี่ยวกับ ฉัน" data-en="About Me">เกี่ยวกับ ฉัน</h2>
+      <p data-th="ผมเรียนวิศวกรรมคอมพิวเตอร์ สนใจสาย Full-Stack Development และกำลังมองหาโอกาสฝึกงานเพื่อพัฒนาทักษะการเขียนโปรแกรมอย่างจริงจัง" data-en="I am studying Computer Engineering, interested in Full-Stack Development, and looking for an internship opportunity to seriously improve my programming skills.">ผมเรียนวิศวกรรมคอมพิวเตอร์ สนใจสาย Full-Stack Development และกำลังมองหาโอกาสฝึกงานเพื่อพัฒนาทักษะการเขียนโปรแกรมอย่างจริงจัง</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 data-th="ความสามารถ" data-en="skills">ความสามารถ</h2>
+      <ul class="skills">
+        <li>✅ HTML / CSS / JavaScript</li>
+        <li>✅ React, Node.js</li>
+        <li>✅ Git, GitHub</li>
+        <li>✅ Python, SQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 data-th="โปรเจ็คร์" data-en="Projects">Projects</h2>
+      <div class="project">
+        <h3>📝 noob App</h3>
+        <p>แอปกากๆ เขียนด้วย React + Firebase</p>
+        <a href="https://github.com/username/todo-app" target="_blank" class="btn" data-th="ดูบน GitHub" data-en="Watch on GitHub">ดูบน GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>📧 kiatsakul@email.com</p>
+      <p><a href="https://github.com/kiatsakul0315" target="_blank">GitHub</a> | <a href="#">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Kiatsakul. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="lang-switch.js"></script>
 </body>
 </html>
