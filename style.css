@@ -87,42 +87,74 @@ body {
     object-fit: cover;
   }
   
-  @media (max-width: 768px) {
-    header .container {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0 5%;
-    }
-  
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    .hero {
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-  
-    .hero img {
-      width: 120px;
-      margin-bottom: 1rem;
-    }
-  
-    .section {
-      padding: 2rem 5%;
-    }
-  
-    .project {
-      margin-top: 1rem;
-    }
-  
-    nav a.btn,
-    nav button.btn {
-      width: 100%;
-      text-align: left;
-    }
+  .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.nav-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.nav-dropdown.show {
+  max-height: 500px;
+  opacity: 1;
+}
+.image-row {
+  display: flex;           /* เรียงรูปในแนวนอน */
+  gap: 1rem;               /* ช่องว่างระหว่างรูป */
+  flex-wrap: nowrap;       /* ไม่ให้รูปขึ้นบรรทัดใหม่ */
+  overflow-x: auto;        /* ถ้ารูปเยอะเกิน ให้เลื่อนซ้ายขวาได้ */
+}
+
+.project-img {
+  width: 120px;            /* ขนาดรูปปรับได้ตามชอบ */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;         /* ถ้าจะให้คลิกได้ */
+  transition: transform 0.3s;
+}
+
+.project-img:hover {
+  transform: scale(1.05);  /* ซูมเวลาชี้ */
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 10%;
+    left: 10%;
+    z-index: 999;
   }
-  
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  nav a,
+  nav button {
+    margin: 0.5rem 0;
+  }
+}

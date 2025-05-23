@@ -11,20 +11,22 @@
   <header>
     <div class="container">
       <h1 data-th="เรซูเม่ เกียรติสกุล ไพยเสน" data-en="Resume Kiatsakul paiyasen">เรซูเม่ เกียรติสกุล ไพยเสน</h1>
-      <nav>
-        <a href="#about"class="btn" data-th="เกี่ยวกับ" data-en="About">เกี่ยวกับ</a>
-        <a href="#skills"class="btn" data-th="ความสามารถ" data-en="Skills">ความสามารถ</a>
-        <a href="#projects"class="btn" data-th="โปรเจ็คร์" data-en="Projects">โปรเจ็คร์</a>
-        <a href="#contact" class="btn" data-th="ติดต่อ" data-en="Contact">ติดต่อ</a>
-        <button onclick="switchLang('th')" class="btn" data-th="ไทย" data-en="TH">ไทย</button>
-        <button onclick="switchLang('en')" class="btn" data-th="อังกฤษ" data-en="EN">อังกฤษ</button>
-      </nav>
+       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav-menu">
+      <a href="#about" class="btn" data-th="เกี่ยวกับ" data-en="About">เกี่ยวกับ</a>
+      <a href="#skills" class="btn" data-th="ความสามารถ" data-en="Skills">ความสามารถ</a>
+      <a href="#projects" class="btn" data-th="โปรเจ็คร์" data-en="Projects">โปรเจ็คร์</a>
+      <a href="#contact" class="btn" data-th="ติดต่อ" data-en="Contact">ติดต่อ</a>
+      <button onclick="switchLang('th')" class="btn" data-th="ไทย" data-en="TH">ไทย</button>
+      <button onclick="switchLang('en')" class="btn" data-th="อังกฤษ" data-en="EN">อังกฤษ</button>
+    </nav>
     </div>
   </header>
   
   <section class="hero">
     <div class="container">
-      <img src="profile.jpg" alt="Kiatsakul Profile" class="profile-img"/>
+      <img src="photo/profile.jpg" alt="Kiatsakul Profile" class="profile-img"/>
       <h2 data-th="สวัสดีครับ, ผมชื่อเกียรติสกุล" data-en="Hello, I'm Kiatsakul"> สวัสดีครับ, ผมชื่อเกียรติสกุล</h2>
       <p data-th="นักศึกษาสาย Dev ที่หลงใหลใน Web และ AI" data-en="A Dev student passionate about Web and AI">นักศึกษาสาย Dev ที่หลงใหลใน Web และ AI</p>
       <a href="#projects" class="btn" data-th="ดูผลงาน" data-en="See My Work">ดูผลงาน</a>
@@ -54,10 +56,28 @@
     <div class="container">
       <h2 data-th="โปรเจ็คร์" data-en="Projects">โปรเจ็คร์</h2>
       <div class="project">
-        <h3>📝 noob App</h3>
-        <p>แอปกากๆ เขียนด้วย React + Firebase</p>
-        <a href="https://github.com/username/todo-app" target="_blank" class="btn" data-th="ดูบน GitHub" data-en="Watch on GitHub">ดูบน GitHub</a>
-      </div>
+      <div class="project">
+  <h3>MyHotelApp</h3>
+    <div class="image-row">
+      <img src="photo/Screenshot 2025-05-24 061237.png" alt="Kiatsakul Profile" class="project-img" />
+      <img src="photo/Screenshot 2025-05-24 061301.png" alt="Another image" class="project-img" />
+      <img src="photo/Screenshot 2025-05-24 061321.png" alt="Third image" class="project-img" />
+    </div>
+      <p>เว็บแอปนี้พัฒนาด้วย React Native และ Expo โดยใช้ JavaScript เป็นภาษาหลัก สำหรับการเขียนโค้ด ในขณะนี้ยังไม่มีการเชื่อมต่อกับฐานข้อมูล</p>
+      <a href="https://github.com/kiatsakul0315/MyHotelApp" target="_blank" class="btn">ดูบน GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>📸 Image Classifier</h3>
+      <p>เว็บแอปแยกภาพด้วย Teachable Machine + HTML/JS</p>
+      <a href="https://github.com/username/image-classifier" target="_blank" class="btn">ดูบน GitHub</a>
+    </div>
+
+    <div class="project">
+      <h3>🎨 Portfolio Website</h3>
+      <p>เว็บเรซูเม่ส่วนตัว เขียนด้วย HTML, CSS, JS และ Figma</p>
+      <a href="https://github.com/username/portfolio" target="_blank" class="btn">ดูบน GitHub</a>
+    </div>
     </div>
   </section>
 
@@ -76,4 +96,6 @@
   </footer>
   <script src="lang-switch.js"></script>
 </body>
+<script src="togglemenu.js"></script>
+
 </html>
