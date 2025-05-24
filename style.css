@@ -114,8 +114,8 @@ body {
 }
 
 .project-img {
-  width: 120px;            /* ขนาดรูปปรับได้ตามชอบ */
-  height: auto;
+  width: 300px;            /* ขนาดรูปปรับได้ตามชอบ */
+  height: 300px;
   border-radius: 8px;
   object-fit: cover;
   cursor: pointer;         /* ถ้าจะให้คลิกได้ */
